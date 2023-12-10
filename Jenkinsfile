@@ -43,12 +43,7 @@ pipeline {
                             echo "Cargando datos desde el github" &&
                             git pull https://RafaelVillaneda:ghp_CaNT3pufhuOtfVzKowEU3bNH10Oziw26wvX@github.com/RafaelVillaneda/FlaskApp_in_AWS2.git &&
                             echo "Levantando servicios de Docker Compose" &&
-
-                            docker stop my-flask-app || true &&
-                            docker rm my-flask-app || true &&
-                            docker build -t my-flask-app . &&
-                            docker run -d -p 8080:80 my-flask-app &&
-                           
+                            docker-compose up -d --build &&
                             echo "Comandos de ejecucion completados sin errores!"
                         '
                     """
