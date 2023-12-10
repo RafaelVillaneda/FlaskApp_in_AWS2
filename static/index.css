@@ -1,0 +1,57 @@
+body{
+    background-color: #000000;
+}
+#main .carousel-item{
+    max-height: 70vh;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+#carrusel .overlay{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    
+}
+#juegos h3{
+    color: white;
+}
+#juegos p{
+ 
+    color: black;
+}
+
+#tarjetas{
+    background-color: #141212;
+}
+#mas_desc h2{
+    color: white;
+}
+#comentarios p{
+    color: aliceblue;
+
+}
+#comentarios h4{
+    color: rgb(255, 240, 250);
+
+}
+#comentarios h2{
+    color: antiquewhite;
+
+}
+#descargasRTP {
+    background-color: #141212;
+}
+#descargasRTP h1{
+    color: antiquewhite;
+}
+#descargasRTP h3{
+    color: aquamarine;
+}
+
+#descargasRTP p{
+    color: antiquewhite;
+}

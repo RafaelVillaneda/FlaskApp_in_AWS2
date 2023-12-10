@@ -37,13 +37,16 @@ pipeline {
             steps {
                 script {
                     sh """
-                        sshpass -p 'jJ427[35L~kqT~mi(VH' ssh -o StrictHostKeyChecking=no root@146.190.142.111 '
+                        sshpass -p 'REVT2001e' ssh -o StrictHostKeyChecking=no root@143.110.147.110 '
                             echo "Creando y cambiando a la ruta del proyecto" &&
                             cd /home/FlaskApp_in_AWS2 &&
                             echo "Cargando datos desde el github" &&
                             git pull https://RafaelVillaneda:ghp_CaNT3pufhuOtfVzKowEU3bNH10Oziw26wvX@github.com/RafaelVillaneda/FlaskApp_in_AWS2.git &&
                             echo "Levantando servicios de Docker Compose" &&
-                            docker-compose up -d --build &&
+
+                            docker build -t my-flask-app . &&
+                            docker run -d -p 8080:80 my-flask-app &&
+                           
                             echo "Comandos de ejecucion completados sin errores!"
                         '
                     """
